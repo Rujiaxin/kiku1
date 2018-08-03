@@ -19,7 +19,7 @@
 ```
 	git reset --hard HEAD^
 ```
-#### 另一种写法
+	>另一种写法
 ```
 	git reset --hard HEAD~
 ```
@@ -45,10 +45,11 @@
 ## 删除文件
 ```
 	git rm test.txt
-	git commit -m "remove test.txt"
+	git commit -m 'remove test.txt'
 ```
 
 ## 提交至 gitHub
+git pull <远程主机名> <远程分支名>
 ```
 	git push origin master
 ```
