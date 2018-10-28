@@ -1,0 +1,133 @@
+/*公用的样式*/
+ *{
+            padding: 0;
+            margin: 0;
+}
+.fullpage{
+    min-width: 600px;
+}
+
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+
+}
+
+
+@keyframes more{
+    from{
+        transform: translateY(-10px);
+    }
+    to{
+        transform: translateY(10px);
+    }
+}
+
+
+/*右边导航*/
+.nav{
+    width: 70px;
+    height: 200px;
+    position: fixed;
+    right: 30px;
+    bottom: 50%;
+    z-index: 1001; 
+    
+
+}
+.nav ul {
+    width: 100%;
+    height: 100%;
+     padding:0;margin:0;list-style:none;
+}
+.nav ul li{
+    display: block;
+    width: 100%;
+    height: 25%;
+   text-align: center;
+}
+.nav a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    color: red;
+}
+ .nav .active{
+    text-decoration: none;
+    background-color: #81DAF5;
+}
+
+  a:hover {
+     text-decoration:none;
+}
+a:link { text-decoration:none;}
+
+
+/*第一页背景*/
+.box{
+            width: 100%;
+            height: 100%;
+           transition: transform 2s;
+            position: relative;
+            /*让box默认旋转，方便观察*/
+            transform: rotate3d(1,1,0,0deg);
+            /*让子元素保留3d变换之后的效果*/
+            transform-style: preserve-3d;
+            -ms-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            /*添加透视景深效果*/
+            perspective: 0px;
+            /*设置透视的观察角度*/
+            perspective-origin: 0px 0px;
+            margin:0 auto;
+        }
+        .box > div{
+            width:100%;
+            height: 100%;
+            position: absolute;
+            
+        }
+        .box div img{
+            width: 100%;
+            height: 100%;
+        }
+        .front{
+           
+            
+            
+            
+        }
+        .back{
+           backface-visibility:hidden;
+            transform:  rotateY(180deg);
+            -moz-transform:  rotateY(180deg);
+        }
+        .left{
+            
+          
+            transform: translateX(50%) rotateY(-90deg);
+            -moz-transform: translateX(50%) rotateY(-90deg);
+        }
+        .rightl{
+            backface-visibility:hidden;
+            transform: translateX(50%) rotateY(90deg);
+            -moz-transform: translateX(50%) rotateY(90deg);
+        }
+  
+
+.arrow:hover{
+    background-color: skyblue;
+}
+
+.screen03{
+    overflow: hidden;
+}
+ .bg_3{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:url(../images/08.jpg) no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.6;
+ }
